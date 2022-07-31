@@ -1,0 +1,160 @@
+[2022-07-31 23:48:34,327] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:0.12500357627868652 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py", line 11, in decorated
+    return f(*args, **kwargs)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
+[2022-07-31 23:49:10,520] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:0.004997730255126953 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py", line 11, in decorated
+    return f(*args, **kwargs)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
+[2022-07-31 23:50:52,353] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py rt:0.0029990673065185547 Unauthorized Access 
+NoneType: None
+[2022-07-31 23:51:05,148] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py rt:0.0020029544830322266 Unauthorized Access 
+NoneType: None
+[2022-07-31 23:52:24,771] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest?key=KfmH9cDCXnYXhXk7ne6MF6XtgJ7Ea7XA2 C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:36.92107272148132 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py", line 11, in decorated
+    return f(*args, **kwargs)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
+[2022-07-31 23:55:05,579] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:13.806579351425171 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
+[2022-07-31 23:55:14,519] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:3.154996156692505 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
+[2022-07-31 23:59:11,848] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:206.3748733997345 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 12, in get_latest_news
+    news_records = NEWS.query.filter(NEWS.news_category == category.value).limit(2).order_by(NEWS.insert_date.desc()).all()
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\sql\base.py", line 110, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in order_by
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\base.py", line 229, in generate
+    assertion(self, fn.__name__)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\sqlalchemy\orm\query.py", line 312, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Query.order_by() being called on a Query which already has LIMIT or OFFSET applied.  Call order_by() before limit() or offset() are applied.
