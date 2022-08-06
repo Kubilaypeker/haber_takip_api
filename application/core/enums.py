@@ -8,9 +8,11 @@ class URL_SUFFIX(Enum):
     MAGAZINE = "/magazin/"
     LOCAL = "/ankara/" # TODO burayı herhangi bi şehire çevirebiliyon sen seç istersen argüman alarak gönder
     TECH = "/teknoloji/"
+    SPORT = "/spor/"
 
 
 class NewsCategories(Enum):
+    SPORT = "SPORT"
     POLITIC = "POLITIC"
     WORLD = "WORLD"
     ECONOMY = "ECONOMY"

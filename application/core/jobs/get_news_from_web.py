@@ -20,7 +20,7 @@ def get_news_from_web():
         JobUtils.insert_tech_news(new_job)
         JobUtils.insert_world_news(new_job)
         JobUtils.insert_magazine_news(new_job)
-
+        JobUtils.insert_sport_news(new_job)
 
         # TODO other job utils will be calling here
 

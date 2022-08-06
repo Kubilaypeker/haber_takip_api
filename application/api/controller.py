@@ -70,3 +70,12 @@ def get_tech_news():
     if tech_news:
         response.data = tech_news
     return jsonify(response.__dict__)
+
+@mod_api.route('/sport', methods=['GET'])
+@require_api_key
+def get_sport_news():
+    response = BaseResponse()
+    sport_news = ApiUtils.get_sport_news()
+    if sport_news:
+        response.data = sport_news
+    return jsonify(response.__dict__)

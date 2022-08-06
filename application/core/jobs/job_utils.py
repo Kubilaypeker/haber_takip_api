@@ -109,3 +109,9 @@ class JobUtils:
         parsed_magazine_news = JobUtils.parse_news_content(requested_url=requested_url, url_prefix=self.url_prefix)
         JobUtils.insert_records(parsed_magazine_news, category)
 
+    def insert_sport_news(self):
+        category = NewsCategories.SPORT.value
+        requested_url = self.url_prefix + URL_SUFFIX.SPORT.value
+        parsed_sport_news = JobUtils.parse_news_content(requested_url=requested_url, url_prefix=self.url_prefix)
+        JobUtils.insert_records(parsed_sport_news, category)
+
