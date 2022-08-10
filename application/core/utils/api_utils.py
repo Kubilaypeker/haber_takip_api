@@ -46,10 +46,10 @@ class ApiUtils:
         news_records = NEWS.query.filter(NEWS.news_category == NewsCategories.TECH.value).all()
         return ApiUtils.serialize_news(news_records)
 
+    @staticmethod
     def get_sport_news(self):
         news_records = NEWS.query.filter(NEWS.news_category == NewsCategories.SPORT.value).all()
         return ApiUtils.serialize_news(news_records)
-
 
     @staticmethod
     def serialize_news(news_records):
