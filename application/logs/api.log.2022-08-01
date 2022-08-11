@@ -1,0 +1,42 @@
+[2022-08-01 00:01:19,159] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:0.035997867584228516 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 15, in get_latest_news
+    return ApiUtils.serialize_news(news_list)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 56, in serialize_news
+    "news_date": news.news_date,
+AttributeError: 'list' object has no attribute 'news_date'
+[2022-08-01 00:01:28,823] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/latest C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py rt:0.012017250061035156 Exception on /news/api/latest [GET]
+Traceback (most recent call last):
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\new_venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\api\controller.py", line 15, in get_latest_news
+    latest_news = ApiUtils.get_latest_news()
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 15, in get_latest_news
+    return ApiUtils.serialize_news(news_list)
+  File "C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\core\utils\api_utils.py", line 56, in serialize_news
+    "news_date": news.news_date,
+AttributeError: 'list' object has no attribute 'news_date'
+[2022-08-01 12:51:23,758] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/politic C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py rt:0.0009975433349609375 Unauthorized Access 
+NoneType: None
+[2022-08-01 12:51:37,945] ERROR 127.0.0.1 GET HTTP/1.1 http://127.0.0.1:5000/news/api/politic C:\Users\Kubilay Peker\Desktop\new_Api\HaberTakipApi\application\decorators\api_decorators.py rt:0.0009984970092773438 Unauthorized Access 
+NoneType: None
